@@ -51,17 +51,20 @@ alias    gs='git status'
 alias giths='git whatchanged -p --abbrev-commit --pretty=medium'
 alias  grep='grep --color=auto --exclude=*.pyc --exclude-dir=.git --exclude-dir=tmp --exclude=coverage.data --exclude-dir=coverage'
 
-export RI="--format ansi --width 120"
 export PATH="$HOME/.racket/racket/bin:$HOME/.cabal/bin:$HOME/.rbenv/bin:/usr/local/heroku/bin:/$HOME/nvm":$PATH
 #export JDK_HOME="/usr/lib/jvm/java-openjdk/"
+export CFLAGS="-march=native -O3 -pipe -fomit-frame-pointer"
 export JDK_HOME="/usr/java/jdk1.7.0_10"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export _JAVA_OPTIONS="-Dswing.aatext=true -Dawt.useSystemAAFontSettings=on"
-export PYTHONDONTWRITEBYTECODE=1
 
+export PYTHONDONTWRITEBYTECODE=1
+export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages
+
+# https://gist.github.com/jjb/7389552
+export RUBY_GC_HEAP_INIT_SLOTS=600000
 export RUBY_GC_MALLOC_LIMIT=60000000
-#export RUBY_FREE_MIN=200000
-export CFLAGS="-march=native -O3 -pipe -fomit-frame-pointer"
+export RUBY_GC_HEAP_FREE_SLOTS=200000
 
 # get git status
 function parse_git_status {
@@ -154,17 +157,13 @@ function prompt_command {
   # set new color prompt
   #PS1="\[$bldgrn\]\w \[$txtblu\]$ \[$txtrst\]"
   #PS1="${color_user}${USER}${reset}@${bldylw}${HOSTNAME}${reset}:${txtwht}${PWDNAME}${reset}${PS1_GIT}${PS1_VENV} ${FILL}\n➜ "
-  PS1="$bldgrn\w $txtblu$ ${PS1_GIT}${PS1_VENV} ${FILL}\n➜ "
+  PS1="$bldgrn\w $txtblu$ \H ${PS1_GIT}${PS1_VENV} ${FILL}\n➜ "
 }
 
 PROMPT_COMMAND=prompt_command
 eval "$(rbenv init -)"
-eval "$($HOME/code/zh/bin/zh init -)"
-. ~/nvm/nvm.sh
 
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-
-export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages
 
 # disable mouse acceleration
 xinput set-prop 'A4Tech USB Mouse' 'Device Accel Profile' -1
