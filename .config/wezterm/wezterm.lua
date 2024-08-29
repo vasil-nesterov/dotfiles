@@ -4,8 +4,8 @@ local config = wezterm.config_builder()
 
 config.default_prog = { '/opt/homebrew/bin/fish', '-l' }
 
-config.color_scheme = 'rose-pine'
-config.font = wezterm.font 'JetBrains Mono NL'
+config.color_scheme = 'Tokyo Night'
+config.font = wezterm.font 'JetBrains Mono'
 config.font_size = 13.0
 
 
