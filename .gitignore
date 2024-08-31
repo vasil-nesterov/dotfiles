@@ -1,0 +1,15 @@
+/.vscode/
+/.idea/
+
+/local/
+/snippets
+/vendor/bundle/
+
+.DS_Store
+*.code-workspace
+.irb-history
+.pryrc
+
+/bin/production-console
+
+.tool-versions

@@ -1,0 +1,22 @@
+[user]
+	name = Vasil Nesterov
+	email = vasil@hey.com
+[alias]
+	b = branch
+	co = checkout
+	undo = reset HEAD~
+[core]
+	editor = code --wait
+	excludesfile = ~/.gitignore
+	autocrlf = input
+[diff]
+  tool = default-difftool
+[pull]
+	ff = only
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[init]
+	defaultBranch = main
