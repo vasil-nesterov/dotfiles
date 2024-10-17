@@ -1,0 +1,80 @@
+{
+	"name": "goto-test",
+	"publisher": "vorce",
+	"displayName": "goto-test",
+	"description": "Go to the test file for a source",
+	"repository": "https://github.com/vorce/goto-test",
+	"version": "0.0.4",
+	"engines": {
+		"vscode": "^1.55.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:goto-test.gotoTestFile",
+		"onCommand:goto-test.gotoSourceFile"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "goto-test.gotoTestFile",
+				"title": "Go to Test file"
+			},
+			{
+				"command": "goto-test.gotoSourceFile",
+				"title": "Go to Source file"
+			}
+		],
+		"configuration": {
+			"title": "Go to Test",
+			"properties": {
+				"goto-test.testFilePatterns": {
+					"type": "object",
+					"default": {
+						"ex": "%source_file%_test.exs",
+						"java": "%source_file%Test.java",
+						"ts": "%source_file%.test.ts"
+					},
+					"description": "Test file patterns for different file endings. %source_file% is a special template value which will be replaced with the name of the source file (without file ending)."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.55.0",
+		"@typescript-eslint/eslint-plugin": "^4.14.1",
+		"@typescript-eslint/parser": "^4.14.1",
+		"eslint": "^7.19.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.2.1",
+		"typescript": "^4.1.3",
+		"vscode-test": "^1.5.0"
+	},
+	"license": "MIT",
+	"__metadata": {
+		"id": "228d2dd7-682c-4343-9dad-8d57200d108f",
+		"publisherId": "9f8d2f90-e447-4c44-aa26-c375179391f5",
+		"publisherDisplayName": "vorce",
+		"targetPlatform": "universal",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1727622933856,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery"
+	}
+}
