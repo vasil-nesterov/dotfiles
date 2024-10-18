@@ -1,0 +1,24 @@
+{
+    "editor.accessibilitySupport": "off",
+    "editor.autoClosingQuotes": "never",
+    "editor.fontSize": 14,
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.minimap.enabled": false,
+    "editor.tabSize": 2,
+    "extensions.autoCheckUpdates": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.autoSave": "afterDelay",
+    "terminal.integrated.profiles.osx": {
+        "fish": {
+            "path": "/opt/homebrew/bin/fish"
+        }
+    },
+    "terminal.integrated.defaultProfile.osx": "fish",
+    "workbench.colorTheme": "Spinel",
+    
+    "goto-test.testFilePatterns": {
+        "rb": "%source_file%_spec.rb"
+    }
+}
