@@ -3,7 +3,6 @@
     "editor.autoClosingQuotes": "never",
     "editor.fontSize": 14,
     "editor.fontFamily": "JetBrains Mono",
-    "editor.inlayHints.enabled": "offUnlessPressed",
     "editor.minimap.enabled": false,
     "editor.tabSize": 2,
     "extensions.autoCheckUpdates": false,
@@ -16,9 +15,28 @@
         }
     },
     "terminal.integrated.defaultProfile.osx": "fish",
-    "workbench.colorTheme": "Spinel",
+    "workbench.colorTheme": "Gradianto Deep Ocean",
     
     "goto-test.testFilePatterns": {
         "rb": "%source_file%_spec.rb"
-    }
+    },
+    "editor.rulers": [
+        100
+    ],
+    "cursor.cpp.disabledLanguages": [
+        "rust"
+    ],
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "rust-analyzer.hover.actions.debug.enable": false,
+    "rust-analyzer.hover.actions.implementations.enable": false,
+    "rust-analyzer.lens.implementations.enable": false,
+    "editor.codeLens": false,
+    "terminal.integrated.fontSize": 14,
+    "rubyLsp.addonSettings": {
+        
+    },
+    "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true
+}
 }
