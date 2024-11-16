@@ -13,3 +13,5 @@
 /bin/production-console
 
 .tool-versions
+
+.scratches/

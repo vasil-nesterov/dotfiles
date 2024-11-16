@@ -1,42 +1,74 @@
 {
+    "cursor.cpp.disabledLanguages": [
+        "rust",
+        "ruby"
+    ],
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.accessibilitySupport": "off",
     "editor.autoClosingQuotes": "never",
+    "editor.codeLens": true,
     "editor.fontSize": 14,
     "editor.fontFamily": "JetBrains Mono",
+    "editor.inlayHints.enabled": "offUnlessPressed",
     "editor.minimap.enabled": false,
+    "editor.rulers": [
+        120
+    ],
     "editor.tabSize": 2,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "editor.suggestOnTriggerCharacters": false,
     "extensions.autoCheckUpdates": false,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
+    // "explorer.autoReveal": "focusNoScroll",
+    "editor.formatOnSave": true,
     "files.autoSave": "afterDelay",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "terminal.integrated.defaultProfile.osx": "fish",
+    "terminal.integrated.fontSize": 14,
     "terminal.integrated.profiles.osx": {
         "fish": {
             "path": "/opt/homebrew/bin/fish"
         }
     },
-    "terminal.integrated.defaultProfile.osx": "fish",
-    "workbench.colorTheme": "Gradianto Deep Ocean",
-    
+    "search.mode": "reuseEditor",
+    "workbench.colorTheme": "Spinel",
+    "workbench.sideBar.location": "right",
     "goto-test.testFilePatterns": {
         "rb": "%source_file%_spec.rb"
     },
-    "editor.rulers": [
-        100
-    ],
-    "cursor.cpp.disabledLanguages": [
-        "rust"
-    ],
-    "editor.inlayHints.enabled": "offUnlessPressed",
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    },
     "rust-analyzer.hover.actions.debug.enable": false,
     "rust-analyzer.hover.actions.implementations.enable": false,
     "rust-analyzer.lens.implementations.enable": false,
-    "editor.codeLens": false,
-    "terminal.integrated.fontSize": 14,
-    "rubyLsp.addonSettings": {
-        
+    "[ruby]": {
+        "editor.defaultFormatter": "Shopify.ruby-lsp"
     },
-    "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer",
-    "editor.formatOnSave": true
-}
+    "rubyLsp.formatter": "rubocop",
+    "rubyLsp.linters": [],
+    "rubyLsp.enabledFeatures": {
+        "autoClosingQuotes": true,
+        "codeActions": true,
+        "diagnostics": true,
+        "documentHighlights": true,
+        "documentLink": true,
+        "documentSymbols": true,
+        "foldingRanges": true,
+        "formatting": true,
+        "hover": true,
+        "inlayHint": true,
+        "onTypeFormatting": true,
+        "selectionRanges": true,
+        "semanticHighlighting": true,
+        "completion": true,
+        "codeLens": true,
+        "definition": true,
+        "workspaceSymbol": true,
+        "signatureHelp": true,
+        "typeHierarchy": true
+    },
 }
